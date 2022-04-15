@@ -7,6 +7,24 @@
             "unitPrice": 113.15,
             "imageUrl": "https://assetbucketdevelopment.blob.core.windows.net/testing/38572723316446256-4502091711_4306188427186_01.jpg.jpg",
             "category": "groceries"
+        },
+        {
+            "id": "e654a094-640b-5f59-a974-0652efe37b68",
+            "productName": "Bewu guflitju.",
+            "description": "test desc 2",
+            "unitPrice": 1095.69,
+            "imageUrl": "https://assetbucketdevelopment.blob.core.windows.net/testing/22027855980121225-81jJIFKd9iL._AC_UL320_.jpg",
+            "category": "lifestyle"
+        }
+    ],
+    "categories": [
+        {
+            "id": "c34d2273-6ec4-59ee-b3ef-3663b1c66a06",
+            "categoryName": "groceries"
+            },
+        {
+            "id": "f1ef8f20-1438-5652-8bb2-feccaf1a5c9b",
+            "categoryName": "lifestyle"
         }
     ]
 }
