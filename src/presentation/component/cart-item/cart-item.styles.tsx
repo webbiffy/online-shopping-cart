@@ -6,27 +6,27 @@ export const ProductImage = styled.img`
     max-height: 120px;
 `;
 
-export const ProductName = styled.b`
+export const ProductName = styled.p`
     font-size: 18px;
+    margin-top: 0;
+    font-weight: bold;
 `;
 
-export const ProductCategory = styled.p`
-    color: green;
-`;
-
-export const ProductUnitPrice = styled.p`
+export const ProductUnitPrice = styled.span`
     color: red;
-    text-align: center;
     font-weight: bold;
 `
 
-export const Button = styled.button`
-    background: #b0f868;
-    color: #000000;
-    width: 100%;
+export const ButtonQuantity = styled.button`
+    width: 30px;
+    height: 30px;
+`
+
+export const InputQuantity = styled.input`
+    width: 30px;
+    height: 28px;
     border: 0;
-    cursor: pointer;
-    padding: 10px;
+    text-align: center;
 `
 
 interface ColumnProps {width?: string;}
@@ -40,6 +40,6 @@ export const Wrapper = styled.div`
     background: #f6f6f6;
     display: flex;
     flex: 1;
-    align-items:center;
+    align-items:top;
     gap: 20px;
 `;

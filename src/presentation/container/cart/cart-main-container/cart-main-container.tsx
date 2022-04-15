@@ -1,8 +1,12 @@
-import { Wrapper } from "./cart-main-container.styles"
+import CartListContainer from "../cart-list-container/cart-list-container"
+import { Wrapper, Title } from "./cart-main-container.styles"
 
 const CartMainContainer = () => {
     return (
-        <Wrapper>My Cart</Wrapper>
+        <Wrapper>
+            <Title>My Cart</Title>
+            <CartListContainer />
+        </Wrapper>
     )
 }
 

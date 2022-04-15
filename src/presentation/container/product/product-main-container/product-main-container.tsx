@@ -6,7 +6,7 @@ const ProductMainContainer = () => {
         <Wrapper>
             <Content>
                 <Input type="text" placeholder="Search Item"/>
-                <ProductListContainer></ProductListContainer>
+                <ProductListContainer />
             </Content>
         </Wrapper>
     )

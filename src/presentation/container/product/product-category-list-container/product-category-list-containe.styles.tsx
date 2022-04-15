@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DefaultItem = styled.div`
-    padding: 5px 10px;
+    padding: 20px 20px 5px 20px;
     text-transform: Capitalize;
     cursor: pointer;
 `;
