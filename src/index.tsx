@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './presentation/App';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import { CartProvider } from './application/contexts/cart/cart-context';
 
 const queryClient = new QueryClient();
 
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <CartProvider>
+        <App />
+      </CartProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

@@ -1,10 +1,19 @@
 import React from "react"
 import { CategoryItem } from "../../../application/models/product/category-item"
-import { Wrapper } from "./product-category-item.styles"
+import { Wrapper, CategoryLabel } from "./product-category-item.styles"
 
-const ProductCategoryItem:React.FC<CategoryItem> = ({categoryName}) => {
+interface CategoryItemProps {
+    item: CategoryItem;
+    handleCategoryFilter(clickedItem: CategoryItem): void;
+}
+
+const ProductCategoryItem:React.FC<CategoryItemProps> = ({item, handleCategoryFilter}) => {
     return (
-        <Wrapper>{categoryName}</Wrapper>
+        <Wrapper>
+            <CategoryLabel onClick={() => handleCategoryFilter(item)}> 
+                {item.categoryName}
+            </CategoryLabel>
+        </Wrapper>
     )
 }
 

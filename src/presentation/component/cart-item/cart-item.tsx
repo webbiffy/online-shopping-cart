@@ -8,7 +8,7 @@ import { Wrapper, Column, ProductImage,
 
 interface CartItemProps {
     cart: Cart;
-    handleSetQty(clickedItem: Cart): void;
+    handleSetQty(itemId: string, action: any, fixedQty?: number): void;
     handleRemoveItem(clickedItem: Cart): void;
 }
 
@@ -25,9 +25,14 @@ const CartItem:React.FC<CartItemProps> = ({cart, handleSetQty, handleRemoveItem}
                         <ProductUnitPrice>₱{(cart.item.unitPrice * cart.quantity).toFixed(2)}</ProductUnitPrice>
                     </div>
                     <div>
-                        <ButtonQuantity>-</ButtonQuantity>
-                        <InputQuantity value={cart.quantity} />
-                        <ButtonQuantity>+</ButtonQuantity>
+                        <ButtonQuantity 
+                            onClick={() => handleSetQty(cart.item.id, "decrease")}>-</ButtonQuantity>
+                        <InputQuantity 
+                            type="number" 
+                            onChange={(e) => handleSetQty(cart.item.id, "fixed", (e.target.value == "" ? 0 : parseInt(e.target.value)))} 
+                            value={cart.quantity} />
+                        <ButtonQuantity 
+                            onClick={() => handleSetQty(cart.item.id, "increase")}>+</ButtonQuantity>
                     </div>
                 </div>
             </Column>

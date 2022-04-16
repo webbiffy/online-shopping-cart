@@ -1,30 +1,40 @@
 import React from "react"
 import { useQuery } from "react-query";
+//contexts
+import { useProductContext } from "../../../../application/contexts/product/product-context";
+//models
 import { CategoryItem } from "../../../../application/models/product/category-item"
+//services
+import productCategoryService from "../../../../infrastructure/services/product/product-category.service";
+//components
 import ProductCategoryItem from "../../../component/product-category-item/product-category-item"
+//styles
 import { DefaultItem } from "./product-category-list-containe.styles"
-
-//postman - https://43199912-5c49-4a79-a8db-f187f1ac1971.mock.pstmn.io/products/categories
-//json server - https://my-json-server.typicode.com/webbiffy/online-shopping-cart/categories
-const getProductCategories = async(): Promise<CategoryItem[]> =>
-  await (await fetch('https://my-json-server.typicode.com/webbiffy/online-shopping-cart/categories')).json();
-
 
 const ProductCategoryListContainer = () => {
 
-    const { data, isLoading, error } = useQuery<CategoryItem[]>(['productCategories'], getProductCategories);
+    const { filterByCategory } = useProductContext();
 
+    const { data, isLoading, error } = useQuery<CategoryItem[]>(['productCategories'], productCategoryService.getProductCategoryItems);
     if (isLoading) return <div>Loading categories...</div>
     if (error) return <div>Ooops... Something went wrong!</div>
 
+    const defaultItemCategory = {} as CategoryItem;
+    defaultItemCategory.id = "000";
+    defaultItemCategory.categoryName = "All Items";
+
     return (
         <React.Fragment>
-            <DefaultItem>All Items</DefaultItem>
+            <DefaultItem>
+                <span 
+                    style={{cursor: 'pointer'}}
+                    onClick={() => filterByCategory(defaultItemCategory)}>{defaultItemCategory.categoryName}</span>
+            </DefaultItem>
             {data!.map(item =>
                 <ProductCategoryItem 
                     key={item.id}
-                    id={item.id}
-                    categoryName={item.categoryName} />
+                    item={item} 
+                    handleCategoryFilter={filterByCategory} />
                 )}
         </React.Fragment>
     )

@@ -6,9 +6,11 @@ import { Wrapper } from "./cart-list-container.styles"
 import cartService from "../../../../infrastructure/services/cart/cart.service";
 //components
 import CartItem from "../../../component/cart-item/cart-item";
+//contexts
+import { useCartContext } from "../../../../application/contexts/cart/cart-context";
 
 const CartListContainer = () => {
-    const [cartItems, setCartItems] = useState(cartService.getCartItems)
+    const { cartItems, handleSetItemQty } = useCartContext();
 
     return (
         <Wrapper>
@@ -16,7 +18,7 @@ const CartListContainer = () => {
                 <CartItem 
                     key={cart.item.id}
                     cart={cart}
-                    handleSetQty={() => alert('test')}
+                    handleSetQty={handleSetItemQty}
                     handleRemoveItem={() => alert('test')}
                     />
             )}
