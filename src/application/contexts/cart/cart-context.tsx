@@ -8,7 +8,7 @@ interface CartContextType {
     handleAddToCart(clickedItem: ProductItem): void;
     handleSetItemQty(itemId: string, action: any, fixedQty?: number): void;
     handlRemoveItem(itemId: string): void;
-    handleClearAllItems(): void
+    handleClearAllItems(): void;
 }
 
 const CartContext = React.createContext<CartContextType>({} as CartContextType);
@@ -21,7 +21,7 @@ export const CartProvider = ({ children } : any) => {
 
     // todo for refactoring, use object state instead, move methods to another file
 
-    const [cartItems, setCartItems] = useState(cartService.getCartItems)
+    const [cartItems, setCartItems] = useState(cartService.getCartItems);
 
     const handleAddToCart = (clickedItem: ProductItem) => {
       setCartItems(prev => {

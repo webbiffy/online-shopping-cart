@@ -13,5 +13,8 @@ export const CONFIG = {
         FILTER: {
             DEFAULT_TITLE: "All Items"
         }
+    },
+    CHECKOUT: {
+        ORDER_SUCCESS_MESSAGE: "Thank you for purchasing"
     }
 };
