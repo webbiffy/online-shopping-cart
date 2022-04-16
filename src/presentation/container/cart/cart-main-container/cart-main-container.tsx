@@ -29,11 +29,11 @@ const CartMainContainer = () => {
             <CartPriceSummaryWrapper>
                 <CartDetailWrapper>
                     <span>{CONFIG.CART.TOTAL_QTY_TITLE}</span>
-                    <span>{getTotalItems(cartItems)}</span>
+                    <span style={{color: 'red'}}>{getTotalItems(cartItems)}</span>
                 </CartDetailWrapper>
                 <CartDetailWrapper>
                     <span>{CONFIG.CART.TOTAL_AMOUNT_TITLE}</span>
-                    <span>₱{getTotalAmount(cartItems).toFixed(2)}</span>
+                    <span style={{color: 'red', fontWeight:'bold'}}>₱{getTotalAmount(cartItems).toFixed(2)}</span>
                 </CartDetailWrapper>
                 <CheckoutButton
                     onClick={() => alert("Thank you for purchasing")}
