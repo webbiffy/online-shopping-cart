@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export const CategoryLabel = styled.span`
+interface CategoryLabelProps {isActive?: boolean;}
+export const CategoryLabel = styled.span<CategoryLabelProps>`
     cursor: pointer;
+    color: ${props => props.isActive == true ? "green": "black"};
 `
 
 export const Wrapper = styled.div`

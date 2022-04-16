@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+export const RemoveItemButton = styled.button`
+    border: 0;
+    background: red;
+    color: white;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+`
+
 export const ProductImage = styled.img`
     width: 100%;
     border: 0;
@@ -32,7 +44,8 @@ export const InputQuantity = styled.input`
 interface ColumnProps {width?: string;}
 
 export const Column = styled.div<ColumnProps>`
-    width: ${props => props.width}
+    width: ${props => props.width};
+    position: relative;
 `;
 
 export const Wrapper = styled.div`
@@ -42,4 +55,5 @@ export const Wrapper = styled.div`
     flex: 1;
     align-items:top;
     gap: 20px;
+    max-height: 75px;
 `;

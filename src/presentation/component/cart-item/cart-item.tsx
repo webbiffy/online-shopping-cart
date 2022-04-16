@@ -4,18 +4,19 @@ import { CartItem as Cart } from "../../../application/models/cart/cart-item";
 //styles
 import { Wrapper, Column, ProductImage, 
     ProductName, ProductUnitPrice, ButtonQuantity,
-    InputQuantity } from "./cart-item.styles"
+    InputQuantity, RemoveItemButton } from "./cart-item.styles"
 
 interface CartItemProps {
     cart: Cart;
     handleSetQty(itemId: string, action: any, fixedQty?: number): void;
-    handleRemoveItem(clickedItem: Cart): void;
+    handleRemoveItem(itemId: string): void;
 }
 
 const CartItem:React.FC<CartItemProps> = ({cart, handleSetQty, handleRemoveItem}) => {
     return (
         <Wrapper>
             <Column width="20%">
+                <RemoveItemButton onClick={() => handleRemoveItem(cart.item.id)}>X</RemoveItemButton>
                 <ProductImage src={cart.item.imageUrl}></ProductImage>
             </Column>
             <Column width="80%">

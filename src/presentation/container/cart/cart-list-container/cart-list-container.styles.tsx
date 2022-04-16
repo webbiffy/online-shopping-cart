@@ -4,5 +4,6 @@ export const Wrapper = styled.div`
     margin-top: 20px;
     display: flex;
     flex: 1;
-    flex-direction: column
+    flex-direction: column;
+    overflow:auto;
 `;

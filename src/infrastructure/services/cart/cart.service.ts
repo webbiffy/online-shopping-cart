@@ -10,5 +10,8 @@ export default {
     },
     saveCartItems(cartItems: CartItem[]) {
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    },
+    clearCartItems() {
+        localStorage.removeItem('cartItems');
     }
 }

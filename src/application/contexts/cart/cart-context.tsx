@@ -7,6 +7,8 @@ interface CartContextType {
     cartItems: CartItem[];
     handleAddToCart(clickedItem: ProductItem): void;
     handleSetItemQty(itemId: string, action: any, fixedQty?: number): void;
+    handlRemoveItem(itemId: string): void;
+    handleClearAllItems(): void
 }
 
 const CartContext = React.createContext<CartContextType>({} as CartContextType);
@@ -43,7 +45,7 @@ export const CartProvider = ({ children } : any) => {
           
           cartService.saveCartItems([...prev, newCartItem]);  // save to local storage
 
-          return [...prev, newCartItem];
+          return [newCartItem, ...prev];
       });
     };
 
@@ -92,10 +94,26 @@ export const CartProvider = ({ children } : any) => {
         });
     }
 
+    const handlRemoveItem = (itemId: string) => {
+        setCartItems(prev => {
+            const updatedCartItems = prev.filter(prev => prev.item.id !== itemId);
+            cartService.saveCartItems(updatedCartItems);
+
+            return updatedCartItems
+        });
+    }
+
+    const handleClearAllItems = () => {
+        setCartItems([]);
+        cartService.clearCartItems();
+    }
+
     const value = {
       cartItems,
       handleAddToCart,
-      handleSetItemQty
+      handleSetItemQty,
+      handlRemoveItem,
+      handleClearAllItems
     }
 
     return (
