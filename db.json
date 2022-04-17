@@ -1,30 +1,32 @@
 {
-    "products": [
-        {
-            "id": "c34d2273-6ec4-59ee-b3ef-3663b1c66a06",
-            "productName": "test product.",
-            "description": "test description",
-            "unitPrice": 113.15,
-            "imageUrl": "https://assetbucketdevelopment.blob.core.windows.net/testing/38572723316446256-4502091711_4306188427186_01.jpg.jpg",
-            "category": "groceries"
-        },
-        {
-            "id": "e654a094-640b-5f59-a974-0652efe37b68",
-            "productName": "Bewu guflitju.",
-            "description": "test desc 2",
-            "unitPrice": 1095.69,
-            "imageUrl": "https://assetbucketdevelopment.blob.core.windows.net/testing/22027855980121225-81jJIFKd9iL._AC_UL320_.jpg",
-            "category": "lifestyle"
-        }
-    ],
     "categories": [
         {
             "id": "c34d2273-6ec4-59ee-b3ef-3663b1c66a06",
-            "categoryName": "groceries"
-            },
+            "category": "groceries"
+        },
         {
             "id": "f1ef8f20-1438-5652-8bb2-feccaf1a5c9b",
-            "categoryName": "lifestyle"
+            "category": "lifestyle"
+        },
+        {
+            "id": "967ee06e-7a57-5ced-8dea-5dfeb4057a84",
+            "category": "cloths"
+        },
+        {
+            "id": "012893c7-192d-5e10-bbb5-79b184c345ad",
+            "category": "automotive"
+        },
+        {
+            "id": "726087b5-64e9-5a01-8cac-a6e3fec80391",
+            "category": "gadgets"
+        },
+        {
+            "id": "b0f62346-4a8b-556a-8e74-a5077feca580",
+            "category": "furniture"
+        },
+        {
+            "id": "14c50e1f-8548-5486-af7e-2d67f9284198",
+            "category": "toys"
         }
     ]
 }
