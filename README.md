@@ -5,6 +5,9 @@ Simple shopping cart project
 ## Node Version
 v16.14.2
 
+## View project online
+https://webbiffy.github.io/shopping-cart.github.io/
+
 ## To run project in local computer:
 
 1. Make sure you have node installed on your computer.
@@ -15,4 +18,4 @@ v16.14.2
 
 ![image](https://user-images.githubusercontent.com/40140655/163708198-f3d2d040-d3a6-491f-9a55-5c58fe0ec88c.png)
 
-**Disclaimer: still need improvements**
+**Disclaimer: Not looks good yet in mobile version, also other part of code needs improvement**
