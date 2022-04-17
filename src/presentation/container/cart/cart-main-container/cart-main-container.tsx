@@ -36,7 +36,7 @@ const CartMainContainer = () => {
                     <span style={{color: 'red', fontWeight:'bold'}}>₱{getTotalAmount(cartItems).toFixed(2)}</span>
                 </CartDetailWrapper>
                 <CheckoutButton
-                    onClick={() => alert("Thank you for purchasing")}
+                    onClick={() => alert(cartItems.length === 0 ? "You have no item in cart" : "Thank you for purchasing")}
                     >{CONFIG.CART.PROCEED_CHECKOUT_TITLE}</CheckoutButton>
             </CartPriceSummaryWrapper>
         </Wrapper>
