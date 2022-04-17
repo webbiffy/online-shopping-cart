@@ -23,7 +23,7 @@ const ProductCategoryListContainer = () => {
 
     const defaultItemCategory = {} as CategoryItem;
     defaultItemCategory.id = "000";
-    defaultItemCategory.categoryName = CONFIG.SHOP.FILTER.DEFAULT_TITLE;
+    defaultItemCategory.category = CONFIG.SHOP.FILTER.DEFAULT_TITLE;
 
     return (
         <React.Fragment>
@@ -32,7 +32,7 @@ const ProductCategoryListContainer = () => {
                     setActiveCategory(CONFIG.SHOP.FILTER.DEFAULT_TITLE); 
                     filterByCategory(defaultItemCategory); 
                 }}>
-                    {defaultItemCategory.categoryName}
+                    {defaultItemCategory.category}
                 </span>
             </DefaultItem>
             {data!.map(item =>
