@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 //styles
 import { Wrapper } from "./cart-list-container.styles"
 //components

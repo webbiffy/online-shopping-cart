@@ -13,7 +13,7 @@ const ProductCategoryItem:React.FC<CategoryItemProps> = ({item, handleCategoryFi
     return (
         <Wrapper>
             <CategoryLabel 
-                isActive={activeCategory == item.categoryName} 
+                isActive={activeCategory.toLowerCase() === item.categoryName.toLowerCase()} 
                 onClick={() => {
                     handleCategoryFilter(item);
                     handleSetActiveCategory(item.categoryName)

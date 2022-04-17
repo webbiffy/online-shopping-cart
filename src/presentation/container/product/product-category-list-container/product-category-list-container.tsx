@@ -1,5 +1,4 @@
 import React from "react"
-import { useState } from "react";
 import { useQuery } from "react-query";
 //common
 import { CONFIG } from "../../../../application/common/config";
@@ -28,7 +27,7 @@ const ProductCategoryListContainer = () => {
 
     return (
         <React.Fragment>
-            <DefaultItem isActive={activeCategory == CONFIG.SHOP.FILTER.DEFAULT_TITLE}>
+            <DefaultItem isActive={activeCategory === CONFIG.SHOP.FILTER.DEFAULT_TITLE}>
                 <span onClick={() => {
                     setActiveCategory(CONFIG.SHOP.FILTER.DEFAULT_TITLE); 
                     filterByCategory(defaultItemCategory); 

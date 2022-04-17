@@ -32,7 +32,7 @@ export const ProductProvider = ({ children } : any) => {
     // todo: move and separate product filter to another file 
     const filterByCategory = (selectedCategory: CategoryItem) => {
         setProductItemsFiltered(() => {
-            if(selectedCategory.categoryName.toLowerCase() == "all items")
+            if(selectedCategory.categoryName.toLowerCase() === CONFIG.SHOP.FILTER.DEFAULT_TITLE.toLowerCase())
                 return productItems;
 
             const filtered = productItems.filter(product => product.category == selectedCategory.categoryName);
@@ -45,7 +45,7 @@ export const ProductProvider = ({ children } : any) => {
         setProductItemsFiltered(() => {
 
             const filtered = productItems.filter(product => product.productName.toLowerCase().includes(productName.toLowerCase())
-                        && (categoryName.toLowerCase() == CONFIG.SHOP.FILTER.DEFAULT_TITLE.toLowerCase() || product.category.toLowerCase() == categoryName?.toLowerCase()));
+                        && (categoryName.toLowerCase() === CONFIG.SHOP.FILTER.DEFAULT_TITLE.toLowerCase() || product.category.toLowerCase() === categoryName?.toLowerCase()));
 
             return filtered;
         });

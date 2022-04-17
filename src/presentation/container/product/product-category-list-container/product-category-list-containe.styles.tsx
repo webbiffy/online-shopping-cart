@@ -7,7 +7,7 @@ export const DefaultItem = styled.div<DefaultItemProps>`
     text-transform: Capitalize;
     
     span {
-        color: ${props => props.isActive == true ? "green": "black"};
+        color: ${props => props.isActive === true ? "green": "black"};
         cursor: pointer;
     }
 `;

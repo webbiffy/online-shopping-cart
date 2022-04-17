@@ -30,7 +30,7 @@ const CartItem:React.FC<CartItemProps> = ({cart, handleSetQty, handleRemoveItem}
                             onClick={() => handleSetQty(cart.item.id, "decrease")}>-</ButtonQuantity>
                         <InputQuantity 
                             type="number" 
-                            onChange={(e) => handleSetQty(cart.item.id, "fixed", (e.target.value == "" ? 0 : parseInt(e.target.value)))} 
+                            onChange={(e) => handleSetQty(cart.item.id, "fixed", (e.target.value === "" ? 0 : parseInt(e.target.value)))} 
                             value={cart.quantity} />
                         <ButtonQuantity 
                             onClick={() => handleSetQty(cart.item.id, "increase")}>+</ButtonQuantity>
