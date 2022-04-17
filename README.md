@@ -8,6 +8,8 @@ v16.14.2
 ## View project online
 https://webbiffy.github.io/shopping-cart.github.io/
 
+**Disclaimer: Not looks good yet in mobile version, also other part of code needs improvement**
+
 ## To run project in local computer:
 
 1. Make sure you have node installed on your computer.
@@ -17,5 +19,3 @@ https://webbiffy.github.io/shopping-cart.github.io/
 5. Open http://localhost:3000 to view it in the browser as per below:
 
 ![image](https://user-images.githubusercontent.com/40140655/163708198-f3d2d040-d3a6-491f-9a55-5c58fe0ec88c.png)
-
-**Disclaimer: Not looks good yet in mobile version, also other part of code needs improvement**
