@@ -1,5 +1,6 @@
 import { CategoryItem } from "../../../application/models/product/category-item";
 
+
 // todo: use api handler instead
 export default {
     async getProductCategoryItems (): Promise<CategoryItem[]> {

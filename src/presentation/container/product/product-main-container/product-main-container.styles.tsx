@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Content = styled.div`
     padding: 2em;
+    max-height: 80vh;
+    overflow: auto;
 `;
 
 export const Wrapper = styled.section`
