@@ -37,17 +37,17 @@
             "remark": "Test order - LF-1250"
           },
           {
-            "ïd": "9e2b9530-850a-47ca-aaf2-ec5419ed063e",
+            "id": "9e2b9530-850a-47ca-aaf2-ec5419ed063e",
             "status": "arrived_at_consignee_area",
             "remark": null
           },
           {
-            "ïd": "9757ab04-ed39-4267-88d2-ce036a5029ee",
+            "id": "9757ab04-ed39-4267-88d2-ce036a5029ee",
             "status": "in_delivery",
             "remark": null
           },
           {
-            "ïd": "e8d08479-648c-436a-896d-999b6f33d0f6",
+            "id": "e8d08479-648c-436a-896d-999b6f33d0f6",
             "status": "created",
             "remark": null
           }
